@@ -1,0 +1,292 @@
+﻿@import "key-frame.less";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E8EEF9;
+}
+
+.page {
+  max-width: 910px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.top {
+  height: 12px;
+  background-color: #E6E6FA;
+  border: 1px solid black;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  background: -webkit-linear-gradient(top,#80878F,#E8EEF9);
+}
+
+.logo {
+  width: 100%;
+  height: 120px;
+  perspective: 500px;
+  position: relative;
+  img {
+    width: 60px;
+    height: 90px;
+    margin: 0 20px;
+    animation: logo-rotate 2s infinite linear;
+    }
+    .fr {
+      float: right;
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+}
+
+.logo span {
+  line-height: 50px;
+  color: beige;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 40px;
+  background-color: #5A0705;
+  display: inline-block;
+  animation: move 4s infinite;
+  position: absolute;
+  left: 10%;
+  top: 25px;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+nav *{
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  width: 100%;
+  background-color: #899099;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.nav>ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav>ul li a {
+  display: block;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 15px 25px;
+  background-color: #899099;
+  transition: 0.3s all;
+}
+
+.nav li ul {
+  position: absolute;
+  min-width: 150px;
+  display: none;
+  z-index: 1;
+}
+
+.nav li>ul li {
+  border-left: 1px solid #707273;
+  border-right: 1px solid #707273;
+}
+
+.nav li>ul li a {
+  padding: 10px;
+}
+
+.nav a:hover {
+  background-color: #707273;
+}
+
+ul li:hover ul {
+  display: block;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  img{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    width: auto;
+    margin-top: -32px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 1s all;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+  .next {
+    right: 0;
+  }
+}
+
+.content {
+  text-align: center;
+  border: 1px solid black;
+  font-size: 16px;
+  background-color: white;
+  margin: 10px;
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.menu {
+  width: 400px;
+  float: right;
+  margin: 5px 0;
+}
+
+.wrapper-menu {
+  overflow: hidden;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  display: inline;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
+  line-height: 20px;
+  border: 1px solid #DCDCDC;
+  padding: 5px 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.menu .prefix a, .menu .sufix a{
+  border: none;
+}
+
+.menu .prefix a:before {
+  content:"\00AB";
+}
+
+.menu .sufix a:after {
+  content:"\00BB";
+}
+
+.menu ul li a:hover {
+  background-color: #25557D;
+  color: white;
+  border: 1px solid #7C12BC;
+}
+
+.menu .prefix a:hover, .menu .sufix a:hover {
+  border: none;
+}
+
+.content-news {
+  background-color: #F7F7F7;
+  margin: 15px;
+  padding: 10px 25px 25px 25px;
+  line-height: 24px;
+  h1 {
+    text-align: center;
+    color: #56789E;
+    font-size: 22px;
+    line-height: 50px;
+  }
+  >figure img {
+    width: 450px;
+    height: 320px;
+    float: left;
+    margin: 8px 10px 8px 0;
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+footer {
+  height: 130px;
+  margin-top: 15px;
+  background: -webkit-linear-gradient(top,#80878F,#E8EEF9);
+  text-align: center;
+  padding: 5px;
+  color: #1D3252;
+  font-size: 20px;
+  li {
+    display: inline;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  .fa {
+    margin: 20px 20px 0 20px;
+    font-size: 35px;
+    color: #1C4160;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    transition: 0.7s all;
+    &:hover {
+      background-color: #5A0806;
+      color: white;
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.content-news p>img {
+  animation: scale 1.5s infinite alternate ;
+}
+
+.fade {
+  animation: fade 2s;
+}
+
+@import "adaptive.less";
+
+
+
+
+
+
+
